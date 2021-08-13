@@ -1,20 +1,35 @@
 import Vue from "vue";
-import VueRouter from "vue-router";
+import Router from "vue-router";
 
-Vue.use(VueRouter);
+const Home = () => import("../views/Home");
+const Message = () => import("../views/Message");
+const Work = () => import("../views/Work");
+const Profile = () => import("../views/Profile");
 
-const routes = [
-  {
-    path: "/",
-    name: "Home",
-    component: () => import("@/views/Home.vue"),
-  },
-];
+Vue.use(Router);
 
-const router = new VueRouter({
+export default new Router({
+  routes: [
+    {
+      path: "",
+      redirect: "/home",
+    },
+    {
+      path: "/home",
+      component: Home,
+    },
+    {
+      path: "/Message",
+      component: Message,
+    },
+    {
+      path: "/Work",
+      component: Work,
+    },
+    {
+      path: "/profile",
+      component: Profile,
+    },
+  ],
   mode: "history",
-  base: process.env.BASE_URL,
-  routes,
 });
-
-export default router;

@@ -1,14 +1,15 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-  </div>
+  <div><main-nav></main-nav></div>
+  <!-- <h2>首页内容</h2> -->
 </template>
 
 <script>
-// @ is an alias to /src
+import MainNav from "@/components/MainNav";
+
 export default {
   name: "Home",
+  components: { MainNav },
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped></style>
