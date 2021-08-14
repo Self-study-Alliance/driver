@@ -1,7 +1,9 @@
 <template>
   <div class="app">
-    <router-view></router-view>
-    <main-tab-bar></main-tab-bar>
+    <div class="w">
+      <router-view></router-view>
+      <main-tab-bar></main-tab-bar>
+    </div>
   </div>
 </template>
 
@@ -18,4 +20,8 @@ export default {
 <style>
 /* 引用css */
 @import "./assets/css/base.css";
+
+.w {
+  width: 375px;
+}
 </style>

@@ -16,15 +16,10 @@ export default {
 }
 
 #nav {
-  display: flex;
   width: 100%;
-  height: 65px;
   font-size: 18px;
   line-height: 65px;
-  justify-content: left;
-  flex-wrap: nowrap;
-  align-items: center;
-  background-color: red;
+  background-color: rgb(243, 26, 26);
 }
 
 .navname {

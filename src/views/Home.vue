@@ -31,10 +31,9 @@ export default {
 <style scoped>
 .person {
   position: relative;
-  top: 15px;
-  left: 15px;
-  width: 200px;
+  width: 100%;
   height: 40px;
+  margin: 15px 0 0 15px;
 }
 
 .person-img {
@@ -47,14 +46,12 @@ export default {
 
 .person-name {
   position: absolute;
-  top: -15px;
-  left: 50px;
+  margin: -60px 0 0 50px;
 }
 
 .person-tel {
   position: absolute;
-  top: 25px;
-  left: 50px;
+  margin: -20px 0 0 50px;
 }
 
 .attestation {
@@ -73,8 +70,7 @@ export default {
 
 .sign {
   position: relative;
-  top: -40px;
-  left: 280px;
+  margin: -40px 0 0 280px;
 }
 
 .sign-btn {
@@ -83,8 +79,7 @@ export default {
 
 .sign-integral {
   position: absolute;
-  top: 10px;
-  left: -30px;
+  margin: 25px 0 0 -25px;
   font-size: 13px;
   color: rgb(165, 165, 160);
 }
