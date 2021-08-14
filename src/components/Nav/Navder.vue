@@ -19,18 +19,18 @@ export default {
   display: flex;
   width: 100%;
   height: 65px;
-  margin-left: 20px;
   font-size: 18px;
   line-height: 65px;
   justify-content: left;
   flex-wrap: nowrap;
   align-items: center;
+  background-color: red;
 }
 
 .navname {
   width: 110px;
   height: 65px;
-  margin-left: 4.5625rem;
+  margin: 0 auto;
   line-height: 65px;
 }
 </style>
