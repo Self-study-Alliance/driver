@@ -15,6 +15,7 @@ export default {
   bottom: 0;
   display: flex;
   width: 100%;
+  background-color: white;
   box-shadow: 0 -2px 1px rgba(100, 100, 100, 0.2);
 }
 </style>
