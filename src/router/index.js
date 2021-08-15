@@ -11,42 +11,61 @@ const WorkTodo = () => import("../views/workviews/WorkTodo");
 
 Vue.use(Router);
 
+let routes = [
+  {
+    path: "",
+    redirect: "/home",
+  },
+  {
+    path: "/home",
+    component: Home,
+  },
+  {
+    path: "/Message",
+    component: Message,
+  },
+  {
+    path: "/work",
+    component: Work,
+    children: [
+      {
+        path: "WorkQuery",
+        component: WorkQuery,
+      },
+      {
+        path: "workreceipt",
+        component: WorkReceipt,
+      },
+      {
+        path: "worktodo",
+        component: WorkTodo,
+      },
+    ],
+  },
+  {
+    path: "/profile",
+    component: Profile,
+  },
+];
+
+function handleRoutes(routes) {
+  routes.forEach(item => {
+    if (item.children) {
+      let f = item.path;
+      item.children.forEach(c => {
+        c.path = `${f}/${c.path}`;
+        routes[routes.length] = c;
+      });
+      delete item.children;
+    }
+  });
+  return routes;
+}
+
+const finalRoutes = handleRoutes(routes);
+console.log("finalRoutes", finalRoutes);
+
 export default new Router({
-  routes: [
-    {
-      path: "",
-      redirect: "/home",
-    },
-    {
-      path: "/home",
-      component: Home,
-    },
-    {
-      path: "/Message",
-      component: Message,
-    },
-    {
-      path: "/work",
-      component: Work,
-      children: [
-        {
-          path: "WorkQuery",
-          component: WorkQuery,
-        },
-        {
-          path: "workreceipt",
-          component: WorkReceipt,
-        },
-        {
-          path: "worktodo",
-          component: WorkTodo,
-        },
-      ],
-    },
-    {
-      path: "/profile",
-      component: Profile,
-    },
-  ],
+  routes: finalRoutes,
   mode: "history",
 });
