@@ -6,8 +6,8 @@ const Message = () => import("../views/Message");
 const Work = () => import("../views/Work");
 const Profile = () => import("../views/Profile");
 const WorkQuery = () => import("../views/workviews/WorkQuery.vue");
-const WorkReceipt = () => import("../views/workviews/WorkReceipt.vue");
-const WorkTodo = () => import("../views/workviews/WorkTodo.vue");
+const WorkReceipt = () => import("../views/workviews/WorkReceipt");
+const WorkTodo = () => import("../views/workviews/WorkTodo");
 
 Vue.use(Router);
 
@@ -30,15 +30,15 @@ export default new Router({
       component: Work,
       children: [
         {
-          path: "/workquery",
+          path: "WorkQuery",
           component: WorkQuery,
         },
         {
-          path: "/workreceipt",
+          path: "workreceipt",
           component: WorkReceipt,
         },
         {
-          path: "/worktodo",
+          path: "worktodo",
           component: WorkTodo,
         },
       ],

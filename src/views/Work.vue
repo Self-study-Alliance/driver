@@ -2,19 +2,19 @@
   <div>
     <main-nav></main-nav>
     <div class="my-work">
-      <div class="work query" path="/workquery" @click="queryClick">
+      <div class="work query" @click="click('/work/WorkQuery')">
         <div class="work-center">
           <img src="" alt="" />
           <div class="china"> 提货单查询</div><div class="english"> Bill Of Lading inquiry</div>
         </div>
       </div>
-      <div class="work receipt" path="/workreceipt" @click="receiptClick">
+      <div class="work receipt" @click="click('/work/workreceipt')">
         <div class="work-center">
           <img src="" alt="" />
           <div class="china"> 我的签收</div><div class="english"> My Receipt</div>
         </div>
       </div>
-      <div class="work todo" path="/worktodo" @click="todoClick">
+      <div class="work todo" @click="click('/work/worktodo')">
         <div class="work-center">
           <img src="" alt="" />
           <div class="china"> 我的待办</div><div class="english"> My To-Do</div>
@@ -29,22 +29,10 @@ import MainNav from "../components/MainNav.vue";
 export default {
   name: "Work",
   components: { MainNav },
-  props: {
-    path: {
-      type: String,
-      default: "",
-    },
-  },
   methods: {
-    queryClick() {
-      console.log(this.$router);
-      this.$router.replace(this.path);
-    },
-    receiptClick() {
-      this.$router.push(this.path);
-    },
-    todoClick() {
-      this.$router.push(this.path);
+    click(path) {
+      console.log(path);
+      this.$router.push(path);
     },
   },
 };
