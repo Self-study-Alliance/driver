@@ -6,10 +6,12 @@ import ElementUI from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
 import Vant from "vant";
 import "vant/lib/index.css";
+// import MescrollMixin from "./components/Mescroll/MescrollMixin";
 
 Vue.use(Vant);
 Vue.config.productionTip = false;
 Vue.use(ElementUI);
+// Vue.use(MescrollMixin);
 
 new Vue({
   router,

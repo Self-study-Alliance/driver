@@ -29,6 +29,7 @@
     </div>
     <van-notice-bar left-icon="volume-o" text="现在的阳光不在灼热，而是温暖------------------------。" />
     <mes-croll :message="message"></mes-croll>
+    <!-- :down="downOption" @init="mescrollInit" @down="downCallback" @up="upCallback" -->
   </div>
 </template>
 
@@ -54,6 +55,11 @@ export default {
         { img: require("@/assets/img/title/title4.png"), name: "我的兑换码" },
       ],
       message: [
+        { src: require("@/assets/img/swiper/img3.jpg"), name: "舒服佳薰衣草舒缓呵护香皂", address: "南漳", surplus: "25", integra: "50" },
+        { src: require("@/assets/img/swiper/img3.jpg"), name: "舒服佳薰衣草舒缓呵护香皂", address: "南漳", surplus: "25", integra: "50" },
+        { src: require("@/assets/img/swiper/img3.jpg"), name: "舒服佳薰衣草舒缓呵护香皂", address: "南漳", surplus: "25", integra: "50" },
+        { src: require("@/assets/img/swiper/img3.jpg"), name: "舒服佳薰衣草舒缓呵护香皂", address: "南漳", surplus: "25", integra: "50" },
+        { src: require("@/assets/img/swiper/img3.jpg"), name: "舒服佳薰衣草舒缓呵护香皂", address: "南漳", surplus: "25", integra: "50" },
         { src: require("@/assets/img/swiper/img3.jpg"), name: "舒服佳薰衣草舒缓呵护香皂", address: "南漳", surplus: "25", integra: "50" },
         { src: require("@/assets/img/swiper/img3.jpg"), name: "舒服佳薰衣草舒缓呵护香皂", address: "南漳", surplus: "25", integra: "50" },
         { src: require("@/assets/img/swiper/img3.jpg"), name: "舒服佳薰衣草舒缓呵护香皂", address: "南漳", surplus: "25", integra: "50" },
